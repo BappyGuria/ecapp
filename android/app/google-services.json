@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "28548170816",
+    "project_id": "ecapp-15c90",
+    "storage_bucket": "ecapp-15c90.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28548170816:android:7e86f43aa6e7cedfb50ba5",
+        "android_client_info": {
+          "package_name": "com.example.ecapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5g0CVyAxOTYPWYp_nSJCvRE2leFHyv-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
