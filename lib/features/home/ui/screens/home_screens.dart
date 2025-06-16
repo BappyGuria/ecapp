@@ -1,8 +1,13 @@
 import 'package:ecapp/app/assets_path.dart';
+import 'package:ecapp/features/commone/ui/controller/main_botom_nav_controller.dart';
+import 'package:ecapp/features/product/ui/screens/product_category_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../widget/app_bar_icon_button.dart';
 import '../widget/home_carousel_slider.dart';
+import '../../../commone/ui/widget/product_catgory_item.dart';
 import '../widget/product_search_button.dart';
 
 class HomeScreens extends StatefulWidget {
@@ -35,10 +40,10 @@ class _HomeScreensState extends State<HomeScreens> {
               const SizedBox(
                 height: 16,
               ),
-              _buildSectionHeader(title: 'Categories', onTapSeeAll: () {}),
-              _buildSectionHeader(title: 'Popular', onTapSeeAll: () {}),
-              _buildSectionHeader(title: 'Special', onTapSeeAll: () {}),
-              _buildSectionHeader(title: 'New', onTapSeeAll: () {}),
+              _buildSectionHeader(title: 'Categories', onTapSeeAll: () {
+                Get.find<MainBottomNavController>().moveToCategory();
+              }),
+              _getCategoryList(),
             ],
           ),
         ),
@@ -46,7 +51,21 @@ class _HomeScreensState extends State<HomeScreens> {
     );
   }
 
-
+  Widget _getCategoryList() {
+    return SizedBox(
+      height: 100,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return ProductCategoryItem();
+        },
+        separatorBuilder: (context, index) => const SizedBox(
+          width: 8,
+        ),
+      ),
+    );
+  }
 
   AppBar _buildAppBar() {
     return AppBar(
@@ -84,5 +103,6 @@ class _HomeScreensState extends State<HomeScreens> {
       ],
     );
   }
-
 }
+
+

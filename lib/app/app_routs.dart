@@ -1,9 +1,7 @@
-import 'package:ecapp/features/home/ui/screens/home_screens.dart';
+import 'package:ecapp/features/commone/ui/screens/main_bottom_nav_screens.dart';
 import 'package:ecapp/features/auth/ui/screens/login_screen.dart';
 import 'package:ecapp/features/auth/ui/screens/sign_up_screens.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../features/auth/ui/screens/splash_screen.dart';
 
 class AppRouts{
@@ -15,8 +13,8 @@ class AppRouts{
       screenWidget = LoginScreen();
     }if(settings.name == SignUpScreens.name){
       screenWidget = SignUpScreens();
-    }if(settings.name == HomeScreens.name){
-      screenWidget = HomeScreens();
+    }if(settings.name == MainBottomNavScreens.name){
+      screenWidget = MainBottomNavScreens();
     }
     return MaterialPageRoute(builder: (context) => screenWidget);
   }

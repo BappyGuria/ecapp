@@ -1,3 +1,4 @@
+import 'package:ecapp/features/commone/ui/screens/main_bottom_nav_screens.dart';
 import 'package:ecapp/features/home/ui/screens/home_screens.dart';
 import 'package:ecapp/features/auth/ui/screens/login_screen.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
   /// Move TO Login Screen
   Future<void>_moveToLoginScreen()async{
     await Future.delayed(Duration(seconds: 3));
-    Navigator.pushReplacementNamed(context, HomeScreens.name);
+    Navigator.pushReplacementNamed(context, MainBottomNavScreens.name);
   }
 
 
