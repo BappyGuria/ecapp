@@ -1,6 +1,4 @@
 import 'package:ecapp/features/commone/ui/screens/main_bottom_nav_screens.dart';
-import 'package:ecapp/features/home/ui/screens/home_screens.dart';
-import 'package:ecapp/features/auth/ui/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import '../widgets/app_logo.dart';
 

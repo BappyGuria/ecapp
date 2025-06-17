@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import '../../../../app/app_colors.dart';
+import '../../../commone/ui/widget/product_card.dart';
 import '../widget/app_bar_icon_button.dart';
 import '../widget/home_carousel_slider.dart';
 import '../../../commone/ui/widget/product_catgory_item.dart';
@@ -44,9 +46,82 @@ class _HomeScreensState extends State<HomeScreens> {
                 Get.find<MainBottomNavController>().moveToCategory();
               }),
               _getCategoryList(),
+              const SizedBox(
+                height: 16,
+              ),
+              _buildSectionHeader(title: 'Popular', onTapSeeAll: () {
+              }),
+              const SizedBox(
+                height: 16,
+              ),
+              _getPopularProduct(),
+              const SizedBox(
+                height: 16,
+              ),
+              _buildSectionHeader(title: 'Special', onTapSeeAll: () {
+              }),
+              const SizedBox(
+                height: 16,
+              ),
+              _getSpecialProduct(),
+              const SizedBox(
+                height: 16,
+              ),
+              _buildSectionHeader(title: 'New', onTapSeeAll: () {
+              }),
+              const SizedBox(
+                height: 16,
+              ),
+              _getNewProduct(),
+              const SizedBox(
+                height: 16,
+              ),
+
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  SizedBox _getNewProduct() {
+    return SizedBox(
+      height: 200,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return ProductCard();
+        },
+        separatorBuilder: (context, index) => SizedBox(
+          width: 10,
+        ),
+      ),
+    );
+  }
+
+  SizedBox _getSpecialProduct() {
+    return SizedBox(
+              height: 200,
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return ProductCard();
+                },
+                separatorBuilder: (context, index) => SizedBox(
+                  width: 10,
+                ),
+              ),
+            );
+  }
+
+  Widget _getPopularProduct() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        spacing: 10,
+        children: [1, 2, 3, 4, 5].map((e) => ProductCard()).toList(),
       ),
     );
   }
@@ -104,5 +179,3 @@ class _HomeScreensState extends State<HomeScreens> {
     );
   }
 }
-
-
