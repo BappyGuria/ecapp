@@ -1,6 +1,7 @@
 import 'package:ecapp/features/commone/ui/controller/main_botom_nav_controller.dart';
 import 'package:ecapp/features/home/ui/screens/home_screens.dart';
 import 'package:ecapp/features/product/ui/screens/product_category_screen.dart';
+import 'package:ecapp/features/wish_list/ui/screens/wish_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +19,7 @@ class _MainBottomNavScreensState extends State<MainBottomNavScreens> {
     HomeScreens(),
     ProductCategoryScreen(),
     ProductCategoryScreen(),
-    ProductCategoryScreen()
+    WishListScreens()
   ];
   @override
   Widget build(BuildContext context) {

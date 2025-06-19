@@ -13,6 +13,7 @@ class HomeCarouselSlider extends StatefulWidget {
 }
 
 class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
+
   final ValueNotifier<int> _currentCarousel = ValueNotifier(0);
 
   @override

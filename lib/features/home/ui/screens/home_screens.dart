@@ -1,11 +1,9 @@
 import 'package:ecapp/app/assets_path.dart';
 import 'package:ecapp/features/commone/ui/controller/main_botom_nav_controller.dart';
-import 'package:ecapp/features/product/ui/screens/product_category_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import '../../../../app/app_colors.dart';
 import '../../../commone/ui/widget/product_card.dart';
 import '../widget/app_bar_icon_button.dart';
 import '../widget/home_carousel_slider.dart';
